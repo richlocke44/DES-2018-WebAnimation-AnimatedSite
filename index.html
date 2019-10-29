@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="css.css">
+    <script type="text/javascript">
+    var myVar;
+
+      function myFunction() {
+        myVar = setTimeout(showPage, 6000);
+      }
+
+      function showPage() {
+      document.getElementById("pageloader").style.display = "none";
+      document.getElementById("wrapper").style.display = "block";
+      }
+
+      $(function(){
+      			$("#home").click(function(){
+      				$("#page2").css("display","none");
+      				$("#page3").css("display","none");
+              $("#page4").css("display","none");
+              $("#page1").css("display","block");
+              $("#wrapper").css("background-image","url('Always-winter.jpg')");
+              $(".fallingSnow span").css("display","inline-block");
+              $(".fallingSnow span").css("background-image","url('snowflake.png')");
+              $("#mySidenav").css("width","0");
+              $("#main").css("marginLeft","0");
+
+              });
+
+              $("#projects").click(function(){
+                $("#page1").css("display","none");
+                $("#page3").css("display","none");
+                $("#page4").css("display","none");
+                $("#page2").css("display","block");
+                $("#wrapper").css("background-image","url('spring2.jpg')");
+                $(".fallingSnow span").css("display","inline-block");
+                $(".fallingSnow span").css("background-image","url('flower-clip-art.fw.png')");
+                $("#mySidenav").css("width","0");
+                $("#main").css("marginLeft","0");
+
+              });
+
+              $("#about").click(function(){
+                $("#page1").css("display","none");
+                $("#page2").css("display","none");
+                $("#page4").css("display","none");
+                $("#page3").css("display","block");
+                $("#wrapper").css("background-image","url('Dark-Forest.jpg')");
+                $(".fallingSnow span").css("display","inline-block");
+                $(".fallingSnow span").css("background-image","url('Raindrop.fw.png')");
+                $("#mySidenav").css("width","0");
+                $("#main").css("marginLeft","0");
+
+              });
+
+              $("#contact").click(function(){
+                $("#page2").css("display","none");
+                $("#page3").css("display","none");
+                $("#page1").css("display","none");
+                $("#page4").css("display","block");
+                $("#wrapper").css("background-image","url('summerbackground.png')");
+                $(".fallingSnow span").css("background-image","none");
+                $("#mySidenav").css("width","0");
+                $("#main").css("marginLeft","0");
+                $("#main").css("color","white");
+
+              });
+
+              $(".stopbtn1").click(function(){
+                $(".fallingSnow span").css("background-image","none");
+                });
+
+              $(".startbtn1").click(function(){
+                $(".fallingSnow span").css("background-image","url('snowflake.png')");
+                });
+
+              $(".startbtn2").click(function(){
+                $(".fallingSnow span").css("background-image","url('flower-clip-art.fw.png')");
+                });
+
+              $(".startbtn3").click(function(){
+                $(".fallingSnow span").css("background-image","url('Raindrop.fw.png')");
+                });
+
+              $(".startbtn4").click(function(){
+                $(".fallingSnow span").css("background-image","none");
+                });
+
+    });
+
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+
+          var a = 0;
+          var txt = 'Hi there. Welcome to my Site!';
+          var txt2 = 'Click my mouth for a smile!';
+          var speed1 = 100;
+
+          function typeWriter() {
+            if (a < txt.length) {
+              document.getElementById("hi").innerHTML += txt.charAt(a);
+              document.getElementById("mouth").innerHTML += txt2.charAt(a);
+              a++;
+              setTimeout(typeWriter, speed1);
+            }
+          }
+
+          function runPara(){
+            document.getElementById("about").addEventListener("click", writePara());
+          }
+
+
+          var i = 0;
+          var txt3 = "My name is Richard locke, I was born and live in High Wycombe, Buckinghamshire but I am a student at Southampton Solent University currently studying web design & development. My first interest in web design came from when I studied IT as an extra choice at GCSE where I learned to just make simple web pages and buttons in adobe dreamweaver. Along with other aspects this then led me to take a higher two year cours in IT at Amersham & Wycombe college where I got to learn a lot of new things including logo design, some knowledge in HTML, CSS Javascript and c++. I also did a few projects in  my own time and making a couple of websites using Adobe Muse's design software as practice with placing elements and features on web pages and getting a feel for how it all comes together. This is where my real passion for web design came from because I was intregued as to how websites were actually created and built from scratch.";
+          var txt4 = "I was keen to learn more about the world of web design which is why I then enrolled on the 3 year degree course in web design & development at Solent. When I finish my degree I hope to join a big company as a front-end web designer and gain a really good few years experience whilst grower as a designer and then the plan is to one day hopefullly become self-employed and start my own web design company an see how things go from there but hopefully being very successful as I do so.";
+          var speed = 25;
+
+          function writePara(){
+
+            if (i < txt3.length) {
+              document.getElementById("aboutme1").innerHTML += txt3.charAt(i);
+              document.getElementById("aboutme2").innerHTML += txt4.charAt(i);
+              i++;
+              setTimeout(writePara, speed);
+            }
+          }
+
+
+    </script>
+  </head>
+  <body onload="myFunction()">
+    <div id="pageloader">
+      <div class="no1">1</div>
+      <div class="no2">2</div>
+      <div class="no3">3</div>
+      <div class="no4">4</div>
+      <div class="no5">5</div>
+    </div>
+    <div id="wrapper" style="display:none;">
+      <div class="fallingSnow">
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    		<span></span>
+    	</div>
+
+        <div id="mySidenav" class="sidenav">
+          <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+          <a id="home" href="#Home">Home</a>
+          <a id="projects" href="#Projects">Projects</a>
+          <a id="about" href="#About" onclick="runPara()">About</a>
+          <a id="contact" href="#Contact">Contact</a>
+        </div>
+
+        <div id="main">
+          <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+          <img class="logo" alt="logo" src="images\Logo.fw.png" />
+
+          <div id="page1">
+            <input class="stopbtn1" type="button" name="button" value="Stop Snowfall"/></br>
+            <input class="startbtn1" type="button" name="button" value="Start Snowfall"/>
+              <div id="image">
+            		<svg xmlns="http://www.w3.org/2000/svg"
+            			 xmlns:xlink="http://www.w3.org/1999/xlink"
+            			 width="960px"
+            			 height="565px"
+            			 viewBox="0 0 960 565">
+
+
+            			<circle class="circle1" cx="250" cy="430" r="135" />
+            			<circle class="circle2" cx="250" cy="260" r="105" />
+            			<circle class="circle3" cx="250" cy="110" r="75" />
+            			<line class="line1" x1="150" y1="250" x2="75" y2="350">
+            				<animate id="first" attributeName="y2" from="350" to="150" dur="5s" begin="6s"/>
+            				<animate id="second" attributeName="y2" from="150" to="350" dur="5s" begin="first.end" />
+            			</line>
+
+            			<line class="line2" x1="350" y1="250" x2="425" y2="350" />
+            			<circle class="btn1" cx="250" cy="230" r="10" />
+            			<circle class="btn2" cx="250" cy="280" r="10" />
+            			<circle class="btn3" cx="250" cy="330" r="10" />
+
+            			<g id="group">
+            			<circle id="one" class="smile1" cx="210" cy="145" r="5">
+
+            			</circle>
+            			<circle id="two" class="smile2" cx="230" cy="130" r="5">
+            			<animate
+            						 attributeName="cy" from="130" to="160" dur="2s" begin="group.click" fill="freeze"
+            						 />
+            			</circle>
+            			<circle id="three" class="smile3" cx="250" cy="125" r="5">
+            			<animate
+            						 attributeName="cy" from="125" to="165" dur="2s" begin="group.click" fill="freeze"
+            						 />
+            			</circle>
+            			<circle id="four" class="smile4" cx="270" cy="130" r="5">
+            			<animate
+            						 attributeName="cy" from="130" to="160" dur="2s" begin="group.click" fill="freeze"
+            						 />
+            			</circle>
+            			<circle id="five" class="smile5" cx="290" cy="145" r="5"></circle>
+            			</g>
+
+            			<circle class="eye1" cx="215" cy="80" r="10" />
+            			<circle class="eye2" cx="280" cy="80" r="10" />
+
+            			<polyline points="150,150 250,110 250,90" class="nose" />
+            			<g id="hat">
+            			<rect id="rect1" x="200" y="10" width="100" height="50" />
+            			<rect id="rect2" x="175" y="35" width="150" height="25" />
+            				<animate attributeName="rect.rect1.width" from="100" to="200" dur="2s" begin="hat.click"/>
+            			</g>
+                  <polylgon points="200,50 150,110 150,90" />
+                  <rect id="speech1" x="0" y="120" width="140" height="50">
+                  </rect>
+                  <polygon id="speech1"points="130,170 180,170 130,150" />
+                  <rect id="speech1" x="390" y="80" width="140" height="50">
+                  </rect>
+                  <polygon id="speech1"points="390,130 340,130 390,110" />
+
+            		</svg>
+            	</div>
+
+            <div id="hi"></div>
+            <div id="mouth"></div>
+            <script>
+            setTimeout(typeWriter, 6000);
+            </script>
+          </div>
+
+          <div id="page2">
+            <input class="stopbtn1" type="button" name="button" value="Stop Flowers"/></br>
+            <input class="startbtn2" type="button" name="button" value="Start Flowers"/>
+            <h1>Projects</h1>
+            <div id="groupimg">
+              <img class="image1" alt="image1" src="images\solentpizza1.png" width="300px"/>
+              <img class="image2" alt="image2" src="images\solentestore.png" width="300px"/>
+              <img class="image3" alt="image3" src="images\stevo.png" width="300px"/>
+              <img class="image4" alt="image4" src="images\spa.png" width="300px"/>
+              <img class="image5" alt="image4" src="images\smartremind.png" width="300px"/>
+            </div>
+          </div>
+
+          <div id="page3">
+            <input class="stopbtn1" type="button" name="button" value="Stop Raining"/></br>
+            <input class="startbtn3" type="button" name="button" value="Start Raining"/>
+            <h1>About</h1>
+            <div id="aboutme">
+            <p id=aboutme1>
+
+            </p>
+            <p id=aboutme2>
+
+            </p>
+
+          </div>
+          </div>
+
+          <div id="page4">
+            <input class="stopbtn1" type="button" name="button" value="Stop Sun rise"/></br>
+            <input class="startbtn4" type="button" name="button" value="Start Sun rise"/>
+            <h1>Contact</h1>
+            <div class="page4content">
+            <a id="home" href="#"><img alt="facebook" src="images\facebook.png" width="100px"/></a>
+            <a id="home" href="#"><img alt="linkedin" src="images\linkedin.png" width="100px"/></a>
+            <a id="home" href="#"><img alt="instagram" src="images\instagram.png" width="100px"/></a>
+            <a id="home" href="#"><img alt="twitter" src="images\twitter.svg.png" width="100px"/></a>
+            <form id="form">
+              <label>First Name:</label>
+              <input type="text">
+              <label>Last Name:</label>
+              <input type="text">
+              <label>Email Address:</label>
+              <input type="text">
+              <label>Subject:</label>
+              <input type="text">
+              <label>Message:</label>
+              <textarea></textarea>
+              <input type="button" value="Send">
+            </form>
+          </div>
+          </div>
+        </div>
+
+
+
+
+
+</div>
+
+
+  </body>
+</html>

@@ -1,0 +1,309 @@
+#pageloader {
+  margin: 0 auto;
+  font-size: 50px;
+  color: white;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+}
+
+.no1,.no2,.no3,.no4,.no5 {
+  position: relative;
+  top: 0px;
+	left: 45%;
+  display: inline-block;
+  opacity: 0;
+}
+
+.no1 {
+  animation: drop 2s ease-in-out;
+  animation-delay: 1s;
+}
+
+.no2 {
+  animation: drop 2s ease-in-out ;
+  animation-delay: 2s;
+}
+
+.no3 {
+  animation: drop 2s ease-in-out;
+  animation-delay: 3s;
+}
+
+.no4 {
+  animation: drop 2s ease-in-out;
+  animation-delay: 4s;
+
+}
+
+.no5 {
+  animation: drop 2s ease-in-out;
+  animation-delay: 5s;
+}
+
+@keyframes drop {
+    10% {
+        opacity: 0.5;
+    }
+    20% {
+        opacity: 1;
+        top: 50%;
+    }
+    80% {
+        opacity: 1;
+        top: 50%;
+    }
+    90% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+        top: 90%;
+    }
+}
+#wrapper{
+	top:0px;
+	background:#fff;
+	width:100%;
+	height:100%;
+	position:absolute;
+	left:0%;
+	background-image:url(Always-winter.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-position: top;
+	background-size:cover;
+
+}
+
+.fallingSnow {
+    text-align: center;
+}
+.fallingSnow span {
+    display: inline-block;
+    width: 20px;
+    height: 21px;
+		margin: -280px 60px 54px  -34px;
+		background-image:url(snowflake.png);
+    animation: fallingSnow 12s infinite  cubic-bezier(0.35,0.45,0.39,0.29);
+}
+.fallingSnow span:nth-child(5n+5) {
+    animation-delay: 1.3s;
+}
+.fallingSnow span:nth-child(3n+2) {
+    animation-delay: 1.5s;
+}
+.fallingSnow span:nth-child(2n+5) {
+    animation-delay: 1.7s;
+}
+.fallingSnow span:nth-child(3n+10) {
+    animation-delay: 2.7s;
+}
+.fallingSnow span:nth-child(7n+2) {
+    animation-delay: 3.5s;
+}
+.fallingSnow span:nth-child(4n+5) {
+    animation-delay: 5.5s;
+}
+.fallingSnow span:nth-child(3n+7) {
+    animation-delay: 8s;
+}
+
+@keyframes fallingSnow {
+  0% {opacity: 1; transform: translate(0, 0px);}
+  75% {opacity: 1; transform: translate(100px, 600px);}
+  100% {opacity: 0; transform: translate(150px, 800px);}
+}
+
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+		opacity: 0.8;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: red;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+    padding: 16px;
+		color: white;
+		width: 100%;
+		margin: 0 auto;
+}
+.logo{
+	margin: 0 auto;
+	width: 500px;
+	margin-left: 350px;
+}
+.circle1, .circle2, .circle3{
+		fill:white;
+		stroke: black;
+		stroke-width: 2;
+		}
+.line1, .line2{
+		stroke:brown;
+		stroke-width: 3;
+		}
+.nose{
+		fill:orange;
+		}
+#image{
+	margin-left: 450px;
+	margin-top: -100px;
+	position: absolute;
+}
+#speech1{
+	fill: white;
+}
+#hi{
+	position: absolute;
+	margin-left: 460px;
+	color: black;
+	margin-top: 25px;
+	width: 120px;
+}
+#mouth{
+	color: black;
+	position: absolute;
+	margin-left: 855px;
+	margin-top: -15px;
+	width: 120px;
+}
+#page2{
+  display:none;
+
+}
+#page3{
+  display:none;
+}
+#page4{
+  display:none;
+}
+.stopbtn1{
+	background-color: black;
+	color: white;
+	width: 150px;
+	text-align: center;
+	border-radius: 20px;
+	margin-top: 50px;
+}
+.stopbtn1:hover{
+	color: red;
+}
+.startbtn1, .startbtn2, .startbtn3, .startbtn4{
+	background-color: black;
+	color: white;
+	width: 150px;
+	text-align: center;
+	border-radius: 20px;
+}
+.startbtn1:hover, .startbtn2:hover, .startbtn3:hover, .startbtn4:hover{
+	color: green;
+}
+#groupimg{
+	width: 1100px;
+	margin:0 auto;
+	align-items: center;
+}
+#groupimg img{
+	margin-left: 50px;
+	filter: grayscale(100%);
+}
+.image4, .image5{
+	margin-top: 50px;
+}
+#groupimg img:hover{
+	filter: grayscale(0%);
+}
+#aboutme{
+	width: 600px;
+	height: 360px;
+	background-color: white;
+	color: black;
+	margin: 0 auto;
+	border-radius: 25px;
+	border-width: 3px;
+	border-style: solid;
+	border-color: black;
+	padding: 20px;
+}
+
+#aboutme1, #aboutme2{
+	width: 500px;
+	margin: 0 auto;
+	height:240px;
+}
+#page4 h1, #page3 h1, #page2 h1{
+	margin:0 auto;
+	color: white;
+	width: 100px;
+	text-align: center;
+	margin-top: -50px;
+}
+.page4content{
+	width:650px;
+	margin:0 auto;
+	margin-top: 30px;
+}
+.page4content img{
+	margin-left: 50px;
+}
+.page4content img:hover{
+	animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+#form{
+	display: block;
+	background-color: white;
+	color: black;
+	width:200px;
+	margin: 0 auto;
+	padding: 10px;
+	margin-top: 50px;
+	border-radius: 25px;
+	border-width: 3px;
+	border-style: solid;
+	border-color: black;
+}
